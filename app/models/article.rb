@@ -1,3 +1,6 @@
 class Article < ActiveRecord::Base
-  attr_accessible :description, :title
+  belongs_to :user
+  attr_accessible :title, :description
+
+  validates_length_of :title, :minimum => 5
 end

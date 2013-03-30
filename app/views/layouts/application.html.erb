@@ -9,7 +9,20 @@
 <body>
 
   <div id="content">
-  <%= yield %>
+    <nav>
+      <ul>
+      <li><%= link_to "Artikel", articles_path %></li>
+      <li><%= link_to "Personen", users_path %></li>
+      <% if current_user %>
+        Logged in as <%= current_user.name %>
+        <%= link_to "Log out", log_out_path %>
+      <% else %>
+        <%= link_to "Sign up", sign_up_path %> or
+        <%= link_to "Log in",  log_in_path  %>
+      <% end %>
+    </ul>
+    </nav>
+    <%= yield %>
   </div>
 
 </body>
