@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Testanotherthest::Application.load_tasks
+HackMe::Application.load_tasks
