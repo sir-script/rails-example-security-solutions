@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
 
   attr_accessible :name, :email, :password, :is_admin
 
+  validates :name, :email, :password, :presence => true
+  validates :email, :format =>  { :with => /@.+\./, :message => "E-Mail should contain @ and at least one dot" }
+
   def to_s
     name
   end

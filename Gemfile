@@ -20,5 +20,6 @@ group :development, :test do
   gem 'rspec'           
   gem 'rspec-rails'     
   gem 'capybara'        
+  gem 'accept_values_for'
 end
 
