@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130330203528) do
+ActiveRecord::Schema.define(:version => 20130330214835) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(:version => 20130330203528) do
     t.string   "name"
     t.string   "email"
     t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "is_admin",   :default => false
   end
 
 end

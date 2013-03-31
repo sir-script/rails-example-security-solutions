@@ -1,11 +1,8 @@
-== Welcome to The "Hackme"-App
+## Welcome to The "Hackme"-App
 
 This App will help you learn about Rails and Security.
-Run the tests to find out what to do!
 
-  rake spec
-
-== Installation
+## Installation
 
 Two files are not available via the git repository,
 you'll have to create them yourself:
@@ -42,7 +39,7 @@ And the secret token for sessions:
   # If you change this key, all old signed cookies will become invalid!
   # Make sure the secret is at least 30 characters and all random,
   # no regular words or you'll be exposed to dictionary attacks.
-  HackMe::Application.config.secret_token = '1fa301c58899e2b2014199c81c307ee27e825a19595dc865134df0a2acb01f7dd1b101a43457ddaee83214cbee9eaf511a8544816207bee18ded4e7b53c890ef'
+  HackMe::Application.config.secret_token = '1fa301 ... 890ef'
 
 
 
