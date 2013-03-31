@@ -11,7 +11,7 @@
       <%= link_to 'Löschen', article, method: :delete, data: { confirm: 'Sind Sie sicher?' } %>
     </p>
   <% end %>
-  <%= article.description %>
+  <%= raw article.description %>
 
 <% end %>
 
