@@ -9,6 +9,10 @@
   <b>Email:</b>
   <%= @user.email %>
 </p>
+<p>
+  <b>Homepage:</b>
+  <%= link_unless_blank("Homepage", @user.homepage) %>
+</p>
 
 <p>
   <b>Password:</b>

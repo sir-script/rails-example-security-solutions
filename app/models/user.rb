@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :articles
 
-  attr_accessible :name, :email, :password, :is_admin
+  attr_accessible :name, :email, :password, :homepage, :is_admin
 
   validates :name, :email, :password, :presence => true
   validates :email, :format =>  { :with => /@.+\./, :message => "E-Mail should contain @ and at least one dot" }
