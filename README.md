@@ -5,9 +5,7 @@ This App will help you learn about Rails and Security.
 ## Installation
 
 Two files are not available via the git repository,
-you'll have to create them yourself:
-
-    config/database.yml
+you'll have to create them yourself: config/database.yml
 
 
     development:
@@ -29,9 +27,7 @@ you'll have to create them yourself:
       timeout: 5000
 
 
-  And the secret token for sessions:
-
-      config/initializers/secret_token.rb
+And the secret token for sessions: config/initializers/secret_token.rb
 
       # Be sure to restart your server when you modify this file.
 
