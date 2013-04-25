@@ -11,8 +11,8 @@
     <nav>
       <ul>
         <li><%= link_to_unless_current "Home", root_path %></li>
-        <li><%= link_to_unless_current "Artikel", articles_path %></li>
-        <li><%= link_to_unless_current "Personen", users_path %></li>
+        <li><%= link_to_unless_current "Articles", articles_path %></li>
+        <li><%= link_to_unless_current "People", users_path %></li>
         <li><%= link_to_unless_current "Help", static_pages_help_path %></li>
         <% if current_user %>
         <li style="float:right">  

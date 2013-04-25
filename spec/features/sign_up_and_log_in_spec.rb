@@ -14,7 +14,7 @@ describe "Sign Up and Log In", :type => :feature do
     visit "/"
     expect(page).to have_text( article_data[:title] )
     expect(page).to have_text( article_data[:description] )
-    expect(page).to_not have_link( "Neuen Artikel schreiben", :href => new_article_path      )
+    expect(page).to_not have_link( "write new article", :href => new_article_path      )
     expect(page).to_not have_link( "Edit",                    :href => edit_article_path(@a) )
   end
 
@@ -29,8 +29,8 @@ describe "Sign Up and Log In", :type => :feature do
     expect(page).to have_text("User was successfully created")
     expect(page).to have_text("Logged in as")
     expect(page).to have_text( user_data[:name] )
-    click_link "Artikel"
-    expect(page).to have_link( "Neuen Artikel schreiben", :href => new_article_path      )
+    click_link "Article"
+    expect(page).to have_link( "write new article", :href => new_article_path      )
     expect(page).to have_link( "Edit",                    :href => edit_article_path(@a) )
   end
 
@@ -44,8 +44,8 @@ describe "Sign Up and Log In", :type => :feature do
     click_button "Login"
     expect(page).to have_text("Logged in as")
     expect(page).to have_text( user_data[:name] )
-    click_link "Artikel"
-    expect(page).to have_link( "Neuen Artikel schreiben", :href => new_article_path      )
+    click_link "Article"
+    expect(page).to have_link( "write new article", :href => new_article_path      )
     expect(page).to have_link( "Edit",                    :href => edit_article_path(@a) )
   end
 

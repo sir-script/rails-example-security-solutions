@@ -11,7 +11,7 @@ describe "Users", :type => :feature do
       page.body.should have_text('foo@bar.com')
     end
 
-    it "EVIL TEST: shows password" do
+    it "EVIL TEST: does show password" do
       u = User.create!({ :name => 'noob', :email => 'foo@bar.com', :password => 'secret'})
       visit "/users"
       page.body.should have_text('secret')
