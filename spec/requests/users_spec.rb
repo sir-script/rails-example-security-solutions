@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "Users", :type => :request do
 
-  describe "EVIL TEST: create a user" do
+  describe "create user without admin rights" do
 
     it "with admin rights" do
       post "/users", :user => { :name => 'arri', :email => 'foo1@bar1.com', :password => 'secret', :is_admin => '1'}
@@ -11,7 +11,7 @@ describe "Users", :type => :request do
       u = User.find_by_email('foo1@bar1.com')
       u.should_not be_nil
       u.name.should == 'arri'
-      u.is_admin.should be_true
+      u.is_admin.should_not be_true
     end
 
   end
